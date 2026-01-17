@@ -1,0 +1,363 @@
+id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+name: Aadhaar Enrollment & Biometric Analysis
+type: 1
+canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+blocks:
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Analyzes Aadhaar enrollment by state and district with age breakdowns,
+    generates distribution charts showing top regions and enrollment rates
+  height: 1000
+  id: 0c15c4ba-23d4-4365-aad6-38610137ba98
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Regional Enrollment Analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 7400
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Performs comprehensive quality checks on integrated enrollment, demographic,
+    and biometric data including missing value analysis, anomaly detection, completeness
+    by source, and consistency validation
+  height: 1000
+  id: 395c9809-b6f2-4ee5-bc5c-5d8eddd8c422
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Statistical Summaries and Data Quality
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 6000
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: 'Visualizes data quality metrics with 4-chart dashboard: missing data
+    by column, completeness by source, duplicate records by state, and summary quality
+    metrics'
+  height: 1000
+  id: 3c97c086-277b-43c0-a950-6bc8e65009e0
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Data Quality Dashboard
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 6000
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Validates feature distributions across train/test sets with statistics,
+    missing value checks, class balance analysis, and visualizations
+  height: 1000
+  id: 42acccfc-b4cb-46a4-9c37-359604eb0d1b
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Feature Distribution Validation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 8000
+  y: 15800
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates final 4-chart dashboard with enrollment by age group, data
+    source comparison, top 15 states, and biometric capture analysis
+  height: 1000
+  id: 5b1be6c2-9191-4ab4-8f53-308649b3e276
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Comprehensive Visualization Summary
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 14400
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Constructs 31 ML-ready features including enrollment completion target,
+    temporal patterns, age group metrics, biometric ratios, and regional aggregations
+  height: 1000
+  id: 6fe82935-837d-4eb5-b527-804d6df51772
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Feature Engineering and Target Creation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 15800
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Combines Aadhaar enrollment data from three CSV files into a single
+    dataset with ~1M total records
+  height: 1000
+  id: 7f358863-9a9d-4b32-9306-8217e214e989
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Load Enrollment Data
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Encodes categorical features and splits enrollment dataset into 80-20
+    train-test sets for model training
+  height: 1000
+  id: 83571116-61e8-4444-b45b-e95c98d32f7a
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Train-Test Split and Data Preparation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 15800
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Visualizes daily enrollment, demographic, and biometric trends over
+    time with multi-panel line charts
+  height: 1000
+  id: 876dbd16-a556-4765-9145-b1a6271203d3
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Enrollment Trends Over Time
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 13000
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Loads and combines 5 demographic CSV files (2.1M rows) into a single
+    consolidated dataset
+  height: 1000
+  id: 89986da8-467f-4a12-81b0-aa1dd902bf86
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Load Demographic Data
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 3000
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Loads and combines four Aadhaar biometric CSV files into a single dataframe
+    with 1.9M records
+  height: 1000
+  id: 91a05a69-f477-439f-b98e-f3af744e4854
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Load Biometric Data
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 6000
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Merges enrollment, demographic, and biometric datasets on geographic/temporal
+    keys and validates data completeness and quality
+  height: 1000
+  id: a2219795-a62e-499f-bdc0-d9700690fc9b
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Merge Datasets and Validate
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 6000
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Analyzes age distribution across enrollment, demographic, and biometric
+    datasets with state-level breakdowns and visualizations
+  height: 1000
+  id: ab28a9ba-f262-4e04-9de1-8b81d6f25400
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Age and Gender Demographics
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 8800
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Creates heatmap visualizations showing enrollment intensity across
+    top 25 states and age group distribution patterns in top 20 states
+  height: 1000
+  id: b6522d06-982c-426c-8a13-c4e8d2d58bbc
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Regional Heatmap Visualizations
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 11600
+- auto_size: false
+  canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  compute_settings:
+    compute_environment_type: 1
+    executor_image_id: null
+  description: Analyzes biometric enrollment patterns by age group and state, calculates
+    capture rates, and visualizes distribution across top states
+  height: 1000
+  id: fc9fe36e-86f3-44f5-b688-5b3cdaf9562b
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  name: Biometric Modality Analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 10200
+edges:
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 179c7517-570b-49a6-8c4d-b8535178e126
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: 91a05a69-f477-439f-b98e-f3af744e4854
+  target: a2219795-a62e-499f-bdc0-d9700690fc9b
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 1ea12b11-7a64-4034-a0ba-08c869330c18
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: ab28a9ba-f262-4e04-9de1-8b81d6f25400
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 235077a7-d995-45f8-8728-c232b688cf1d
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: 89986da8-467f-4a12-81b0-aa1dd902bf86
+  target: a2219795-a62e-499f-bdc0-d9700690fc9b
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 35e1e3eb-1353-4032-8de5-3c1f9d3bafed
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: 7f358863-9a9d-4b32-9306-8217e214e989
+  target: a2219795-a62e-499f-bdc0-d9700690fc9b
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 65131c17-b4be-4782-ab88-6b1bbf1f8263
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: 6fe82935-837d-4eb5-b527-804d6df51772
+  target: 83571116-61e8-4444-b45b-e95c98d32f7a
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 72504b98-e5ed-47a2-8972-01bc7236adcb
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: 395c9809-b6f2-4ee5-bc5c-5d8eddd8c422
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 82612445-c906-40bd-ad2c-0f0e126a13da
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: 876dbd16-a556-4765-9145-b1a6271203d3
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: 8268f420-8494-4253-8d6a-6a4c8c69e05b
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: 6fe82935-837d-4eb5-b527-804d6df51772
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: ac977bdd-b6ef-4c67-823b-d85472ac2a92
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: fc9fe36e-86f3-44f5-b688-5b3cdaf9562b
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: afed7d06-ab18-4abf-89c5-b4479a047974
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: 83571116-61e8-4444-b45b-e95c98d32f7a
+  target: 42acccfc-b4cb-46a4-9c37-359604eb0d1b
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: d6c3c2bd-8dd6-4043-af3a-38a2b13bbbe6
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: 5b1be6c2-9191-4ab4-8f53-308649b3e276
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: f368f29e-c74e-443b-ac79-9ea14acc75ac
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: 395c9809-b6f2-4ee5-bc5c-5d8eddd8c422
+  target: 3c97c086-277b-43c0-a950-6bc8e65009e0
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: f82a1bfb-debf-4fdb-b537-c6407412d676
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: 0c15c4ba-23d4-4365-aad6-38610137ba98
+- canvas_id: 90a28208-6f9f-4f6e-b22d-eca91c64f9b5
+  id: fa074566-f056-4757-9474-8c3604b6928d
+  layer_id: 10f0bdb2-5882-4e0a-9d5e-9227d0cf042d
+  source: a2219795-a62e-499f-bdc0-d9700690fc9b
+  target: b6522d06-982c-426c-8a13-c4e8d2d58bbc
